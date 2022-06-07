@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "727464107155",
+    "project_id": "propleyapp",
+    "storage_bucket": "propleyapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727464107155:android:2a13f0e87d29d5c1540166",
+        "android_client_info": {
+          "package_name": "com.android.tools.build"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "727464107155-b8ri94jvllhhtgbn0cv6re55b6tpd9jg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO77444gJi_1Nx7LkHILQ6DsMLX2IICXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "727464107155-b8ri94jvllhhtgbn0cv6re55b6tpd9jg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
