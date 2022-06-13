@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:propley_app/constants.dart';
 import 'package:propley_app/signin.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
   runApp(MyApp());
 }
 
