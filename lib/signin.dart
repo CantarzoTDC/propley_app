@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'cadastro.dart';
 
 
 class SignInScreen extends StatelessWidget {
@@ -31,9 +32,18 @@ class SignInScreen extends StatelessWidget {
                         'Entrar'.toUpperCase(),
                         style: Theme.of(context).textTheme.headline4,
                       ),
-                      Text(
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push( context,
+                              MaterialPageRoute(builder: (context){
+                            return CadastroScreen();
+                          }
+                          ));
+                        },
+                        child: Text(
                         'Cadastre-Se'.toUpperCase(),
                         style: Theme.of(context).textTheme.button,
+                        ),
                       ),
                     ],
                   ),
@@ -77,44 +87,6 @@ class SignInScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  Spacer(),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 30),
-                    child: Row(
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(15),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(
-                              color: Colors.white.withOpacity(.5),
-                            ),
-                          ),
-                        ),
-                        SizedBox(width: 15),
-                        Container(
-                          padding: EdgeInsets.all(15),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(
-                              color: Colors.white.withOpacity(.5),
-                            ),
-                          ),
-                        ),
-                        Spacer(),
-                        Container(
-                          padding: EdgeInsets.all(15),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                          ),
-                          child: Icon(
-                            Icons.arrow_forward_ios,
-                            color: Colors.black,
-                          ),
-                        )
-                      ],
-                    ),
-                  )
                 ],
               ),
             ),
