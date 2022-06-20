@@ -2,13 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:propley_app/constants.dart';
 import 'package:propley_app/signin.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:provider/provider.dart';
+
+import 'Auth_service.dart';
+import 'Home.dart';
 
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
-  runApp(MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => AuthService()),
+      ],
+      child: MeuAplicativo(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
