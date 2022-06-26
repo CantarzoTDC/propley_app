@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:propley_app/apresentacao.dart';
 import 'package:propley_app/signin.dart';
-import 'Auth_service.dart';
-import 'Home.dart';
 import 'package:provider/provider.dart';
-
+import 'Auth_service.dart';
 
 class AuthCheck extends StatefulWidget {
   AuthCheck({Key? key}) : super(key: key);
@@ -22,7 +21,7 @@ class _AuthCheckState extends State<AuthCheck> {
     else if (auth.usuario == null)
       return SignInScreen();
     else
-      return MeuAplicativo();
+      return WelcomeScreenState();
   }
 
   loading() {

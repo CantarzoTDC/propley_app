@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'AuthCheck.dart';
-import 'main.dart';
 
 class MeuAplicativo extends StatelessWidget{
   const MeuAplicativo({Key? key}) : super(key: key);
@@ -8,10 +7,12 @@ class MeuAplicativo extends StatelessWidget{
   @override
   Widget build (BuildContext context){
     return MaterialApp(
-      title: 'teste',
+      title: 'test',
       debugShowCheckedModeBanner: false,
-
-    home: MyApp(),
+      theme: ThemeData(
+        primaryColor: Colors.white,
+      ),
+      home: AuthCheck(),
     );
   }
 }
