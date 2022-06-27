@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 import 'Auth_service.dart';
 import 'MeuApp.dart';
 
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();

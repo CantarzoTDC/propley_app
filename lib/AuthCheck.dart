@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:propley_app/apresentacao.dart';
 import 'package:propley_app/signin.dart';
+import 'package:propley_app/pesquisa_Page.dart';
 import 'package:provider/provider.dart';
 import 'Auth_service.dart';
 
