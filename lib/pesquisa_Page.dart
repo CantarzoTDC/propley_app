@@ -1,35 +1,27 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:propley_app/livros.dart';
 import 'api.dart';
 
 class BuildListView extends StatefulWidget {
   @override
-  createState() => _BuildListViewState();
+  _BuildListViewState createState() => _BuildListViewState();
 }
 
-class _BuildListViewState extends State {
-  var livros = <Livros>[];
-  _getLivros() {
-    API.getLivros('a+cabana').then((response) {
+class _BuildListViewState extends State<BuildListView> {
+  List<Livros> livros = List<Livros>.empty();
+  String pesquisa = "diario+de+um+banana";
+
+  _BuildListViewState() {
+    API.getLivros(pesquisa).then((response) {
       setState(() {
-        var list = json.decode(response.body.items);
-        livros = list.map((livro) => Livros.fromJson(livro)).toList();
+        Iterable lista = json.decode(response.body)['items'];
+        livros = lista.map((model) => Livros.fromJson(model)).toList();
       });
     });
   }
 
-  initState() {
-    super.initState();
-    _getLivros();
-  }
-
-  dispose() {
-    super.dispose();
-  }
-
   @override
-  build(context) {
+  Widget build(context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("Lista de Livros"),
