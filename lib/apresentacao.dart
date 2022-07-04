@@ -23,7 +23,7 @@ class WelcomeScreenState extends StatelessWidget {
                 decoration: BoxDecoration(color: Colors.black.withOpacity(0.7)),
                 child: const Text(
                   "O aplicativo Propley foi desenvolvido pelos alunos Daniel Branches, Thiago Emerick e Thiago Gava.\n\n"
-                  "O objetivo do aplicativo é você poder ter um APP para ler Livros de fácil acesso e sem ADS.\n\n",
+                  "O objetivo do aplicativo é você poder ter um App para ler Livros de fácil acesso e sem ADS.\n\n",
                   textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -48,7 +48,7 @@ class WelcomeScreenState extends StatelessWidget {
                         onPressed: () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (_) => BuildListView(),
+                            builder: (_) => Pesquisa_Page(),
                           ),
                         ),
                         style: ElevatedButton.styleFrom(
@@ -60,7 +60,7 @@ class WelcomeScreenState extends StatelessWidget {
                           children: const <Widget>[
                             Icon(
                               Icons.login_outlined,
-                              color: Colors.white,
+                              color: Colors.black,
                               size: 30,
                             ),
                             Text(
@@ -90,7 +90,7 @@ class WelcomeScreenState extends StatelessWidget {
                           children: const <Widget>[
                             Icon(
                               Icons.logout_outlined,
-                              color: Colors.white,
+                              color: Colors.black,
                               size: 30,
                             ),
                             Text(
